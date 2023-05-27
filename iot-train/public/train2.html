@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Model Train Control</title>
+<!-- Add CSS -->
+<link rel="stylesheet" href="/public/trainctrl.css">
+<!-- Add Jquery -->
+<script type="text/javascript" src="/public/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="/public/jquery.rwdImageMaps.min.js"></script>
+<script type="text/javascript" src="/public/jQueryRotate.js"></script>
+
+
+</head>
+<body>
+<h1 id="traintitle">Train Control - Train 2</h1>
+
+<div class="messages"><p id="message0">&nbsp;</p></div>
+
+<div class="trainconsole">
+    <div class="speed">
+    <!--<p>Current speed = <span id="train1_speed">0</span></p>-->
+    <img class="speedometer-dial" src="public/speedometer-dial.png" width="400" height="400" />
+    <img class="speedometer-pointer" id="speeddisplay1" src="public/speedometer-pointer.png" width="400" height="400" />
+    </div>
+
+    <div class="speedcontrol">
+
+    <img id="speed1" src="/public/speedcontrol.png" width="503" height="579" usemap="#speed-map" alt="" />
+        <map name="speed-map">
+            <area shape="rect" coords="245,100, 390,245" href="#" title="Faster" alt="faster1" />
+            <area shape="rect" coords="245,280, 390,430" href="#" title="Slower" alt="slower1" />
+        </map>
+
+    </div>
+
+
+
+    <div class="reverser">
+        <img id="reverser1" src="/public/reverser-fwd.png" width="589" height="579" usemap="#reverser-map" alt="" />
+        <map name="reverser-map">
+            <area shape="poly" coords="360,30, 500,30, 505,260, 360,260" href="#" title="Forward" alt="forward1" />
+            <area shape="poly" coords="360,261, 500,261, 520,520, 360,520" href="#" title="Reverse" alt="reverse1" />
+            <area shape="rect" coords="135,70, 260,210" href="#" title="Forward" alt="forward1" />
+            <area shape="rect" coords="135,335, 260,465" href="#" title="Reverse" alt="reverse1" />
+            <area shape="rect" coords="135,220, 260,325" href="#" title="Stop" alt="stop1" />
+        </map>
+    </div>
+
+
+
+
+    <div class="emergency">Stop</div>
+
+    <div class="autostop">Auto</div>
+
+</div><!--end trainconsole-->
+
+
+
+
+<h1>Train 2</h1>
+
+
+
+<p>Current speed = <span id="train1_speed">0</span></p>
+
+<p id="train1_speedup">Speed Up</p>
+
+<p id="train1_slowdown">Slow Down</p>
+
+
+
+
+<script type="text/javascript" src="/public/traincontrol2.js"></script>
+
+</body>
+</html>
