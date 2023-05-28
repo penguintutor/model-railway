@@ -32,7 +32,7 @@ function updateStatus (data) {
 function updateTrain (train_id) {
         // if direction is 0 (stop) then also reset speed to 0
         if (direction[train_id] == 0) speed[train_id] = 0;
-    $.get('/control', {speed: speed[train_id], train: train_id, direction: direction[train_id]}, updateStatus);
+    $.get('control', {speed: speed[train_id], train: train_id, direction: direction[train_id]}, updateStatus);
     // Move this to call back function?
     viewDisplay (train_id);
 }
@@ -71,13 +71,13 @@ function viewSpeed (train_id) {
 
 function viewDirection (train_id) {
     if (direction[train_id] == 1) {
-        $( "#reverser"+train_id ).attr("src", "/public/reverser-fwd.png");
+        $( "#reverser"+train_id ).attr("src", "public/reverser-fwd.png");
     }
     if (direction[train_id] == -1) {
-        $( "#reverser"+train_id ).attr("src", "/public/reverser-rev.png");
+        $( "#reverser"+train_id ).attr("src", "public/reverser-rev.png");
     }
     if (direction[train_id] == 0) {
-        $( "#reverser"+train_id ).attr("src", "/public/reverser-stop.png");
+        $( "#reverser"+train_id ).attr("src", "public/reverser-stop.png");
     }
 }
 
