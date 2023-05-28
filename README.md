@@ -20,6 +20,13 @@ This is currently under development.
 
 These are still under development at the moment. Future versions may work differently.
 
+## Reverse Proxy option (WiFi unable to connect)
+
+Depending upon your WiFi setup there may be problems when the Raspberry Pi and controller (eg. Phone) are both connected to WiFi. The problem I had is that the phone may switch between 2.5GHz and 5GHz network, when it did it would be unable to connect to the Raspberry Pi. 
+
+I overcame this problem by using a Reverse Proxy which was installed on a different Raspberry Pi which was physically connected to the network. For more details about using a Raspberry Pi as a Reverse Proxy see [Nginx Reverse Proxy on a Raspberry Pi](http://www.penguintutor.com/projects/nginx-reverse-proxy)
+
+
 
 ## More information
 
