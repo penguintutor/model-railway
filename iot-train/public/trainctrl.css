@@ -5,10 +5,11 @@ h1 {
 
 .trainconsole {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 600px 100px;
+    grid-template-columns: 410px 475px 1fr;
+    grid-template-rows: 550px 350px;
     grid-gap: 2px;
-		border-radius: 10px;
+	border-radius: 10px;
+	background-color: #5d6366;
 }
 
 
@@ -17,8 +18,10 @@ h1 {
 	}
 
 .speed {
+    margin-top: 20px;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    text-align: center;
 }
 
 .speedcontrol {
@@ -35,6 +38,7 @@ h1 {
 .emergency {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    text-align: center;
 }
 
 .autostop {
