@@ -19,14 +19,13 @@
 
 <div class="trainconsole">
     <div class="speed">
-    <!--<p>Current speed = <span id="train0_speed">0</span></p>-->
     <img class="speedometer-dial" src="public/speedometer-dial.png" width="400" height="400" />
     <img class="speedometer-pointer" id="speeddisplay0" src="public/speedometer-pointer.png" width="400" height="400" />
     </div>
 
     <div class="speedcontrol">
-    <img id="speed0" src="public/speedcontrol.png" width="469" height="535" usemap="#speed-map" alt="" />
-        <map name="speed-map">
+    <img id="speed0" src="public/speedcontrol.png" width="469" height="535" usemap="#speed-map0" alt="" />
+        <map name="speed-map0">
             <area shape="rect" coords="180,40, 430,250" href="#" title="Faster" alt="faster0" />
             <area shape="rect" coords="180,255, 430,460" href="#" title="Slower" alt="slower0" />
         </map>
@@ -34,15 +33,59 @@
 
 
     <div class="reverser">
-        <img id="reverser0" src="public/reverser-fwd.png" width="487" height="535" usemap="#reverser-map" alt="" />
-        <map name="reverser-map">
+        <img id="reverser0" src="public/reverser-fwd.png" width="487" height="535" usemap="#reverser-map0" alt="" />
+        <map name="reverser-map0">
             <area shape="rect" coords="250,15, 475,240" href="#" title="Forward" alt="forward0" />
             <area shape="rect" coords="250,245, 475,520" href="#" title="Reverse" alt="reverse0" />
         </map>
     </div>
 
 
-    <div class="emergency">
+    <div class="emergency" id="emergencystop0">
+        <img class="emergencystop" src="public/emergencystop.png" width="300" height="300" />
+    </div>
+
+    <div class="autostop">
+        <!-- Todo add automation controls here -->
+        <!-- Auto -->
+    </div>
+    
+
+</div><!--end trainconsole-->
+
+
+
+
+<h1>Train Control - Train 2</h1>
+
+
+<div class="messages"><p id="message1">&nbsp;</p></div>
+
+<div class="trainconsole">
+    <div class="speed">
+    <img class="speedometer-dial" src="public/speedometer-dial.png" width="400" height="400" />
+    <img class="speedometer-pointer" id="speeddisplay1" src="public/speedometer-pointer.png" width="400" height="400" />
+    </div>
+
+    <div class="speedcontrol">
+    <img id="speed1" src="public/speedcontrol.png" width="469" height="535" usemap="#speed-map1" alt="" />
+        <map name="speed-map1">
+            <area shape="rect" coords="180,40, 430,250" href="#" title="Faster" alt="faster1" />
+            <area shape="rect" coords="180,255, 430,460" href="#" title="Slower" alt="slower1" />
+        </map>
+    </div>
+
+
+    <div class="reverser">
+        <img id="reverser1" src="public/reverser-fwd.png" width="487" height="535" usemap="#reverser-map1" alt="" />
+        <map name="reverser-map1">
+            <area shape="rect" coords="250,15, 475,240" href="#" title="Forward" alt="forward1" />
+            <area shape="rect" coords="250,245, 475,520" href="#" title="Reverse" alt="reverse1" />
+        </map>
+    </div>
+
+
+    <div class="emergency" id="emergencystop1">
         <img class="emergencystop" src="public/emergencystop.png" width="300" height="300" />
     </div>
 
@@ -51,22 +94,14 @@
         <!-- Auto -->
     </div>
 
+
+    
 </div><!--end trainconsole-->
 
 
+<h1>Status</h1>
 
-
-<h1>Train 2</h1>
-
-
-
-<p>Current speed = <span id="train1_speed">0</span></p>
-
-<p id="train1_speedup">Speed Up</p>
-
-<p id="train1_slowdown">Slow Down</p>
-
-
+<div class="messages"><p id="statusmessage">&nbsp;</p></div>
 
 
 <script type="text/javascript" src="public/traincontrol.js"></script>

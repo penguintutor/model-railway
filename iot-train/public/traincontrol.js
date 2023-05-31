@@ -30,8 +30,8 @@ function updateStatus (data) {
 
 // Updates the train with current speed and direction (based on global variable)
 function updateTrain (train_id) {
-        // if direction is 0 (stop) then also reset speed to 0
-        if (direction[train_id] == 0) speed[train_id] = 0;
+    // if direction is 0 (stop) then also reset speed to 0
+    if (direction[train_id] == 0) speed[train_id] = 0;
     $.get('control', {speed: speed[train_id], train: train_id, direction: direction[train_id]}, updateStatus);
     // Move this to call back function?
     viewDisplay (train_id);
@@ -47,7 +47,7 @@ function setSpeed (speed_val, train_id, direction_str) {
 // Updates all displays
 function viewDisplay (train_id) {
          viewMsg (train_id);
-     viewSpeed (train_id);
+         viewSpeed (train_id);
          viewDirection (train_id);
 }
 
@@ -85,7 +85,7 @@ function viewDirection (train_id) {
 /* String functions interpret strings and convert to regular functions */
 function mapString (string_val) {
         // last character is train_id
-    instruction = string_val.substring(0, string_val.length-1);
+        instruction = string_val.substring(0, string_val.length-1);
         train_id = parseInt(string_val.substring(string_val.length-1));
         // Direction - can only move one step at a time (eg. if forward must go stop before reverse)
     if (instruction == "forward") {
@@ -135,6 +135,15 @@ function validateSpeed (speed_val){
         else return speed_val;
 }
 
+// Emergency stop buttons
+$("#emergencystop0").click(function() {
+        speed[0] = 0;
+        updateTrain (0);
+});
+$("#emergencystop1").click(function() {
+        speed[1] = 0;
+        updateTrain (1);
+});
 
 $(document).ready(function(e) {
     $('img[usemap]').rwdImageMaps();
@@ -144,4 +153,6 @@ $(document).ready(function(e) {
     });
 
     viewDisplay (0);
+    viewDisplay (1);
+    $("#statusmessage").html("System started");
 });
