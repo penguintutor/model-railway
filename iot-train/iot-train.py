@@ -8,7 +8,7 @@ app = Bottle()
 # Change IPADDRESS if access is required from another computer
 IPADDRESS = ''
 # Where the files are stored
-DOCUMENT_ROOT = '/home/pi/iot-train'
+DOCUMENT_ROOT = '/opt/iot-train'
 
 # public files
 # *** WARNING ANYTHING STORED IN THE PUBLIC FOLDER WILL BE AVAILABLE TO DOWNLOAD
